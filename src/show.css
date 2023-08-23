@@ -1,3 +1,24 @@
 .imgs-conta{
 	display: flex;
+	background-color: #EFE1D1;
+	height: 949px;
+	justify-content: center;
+	align-items: center;
+}
+
+.imgs-conta img {
+	padding: 0 30px 20px 30px;
+}
+
+.big-img{
+	display: flex;
+	flex-direction: column;
+}
+.small-img{
+	display: flex;
+	flex-direction: column;
+}
+.mid-img{
+	display: flex;
+	flex-direction: column;
 }
