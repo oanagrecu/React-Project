@@ -32,22 +32,33 @@ a {
 }
 .text{
 	align-self: center;
+	height: 659px;
 
 }
 .right img {
 	border-radius: 14px;
+	height: 659px;
+	width: 463px;
 }
 
 .text p{
-	line-height: 28px;
-	font-size: 22px;
-	text-align: left;
-	width: 624px;
+	line-height: 49px;
+    font-size: 22px;
+    text-align: left;
+    width: 624px;
+        padding-top: 54px;
 }
 .text h1 {
 	font-family: 'Indie Flower', cursive;
 	font-size: 70px;
+	margin-top: 0;
 }
 bold{
 	color: #C38E77;
 }
+/*.logo img{
+
+	height: 100px;
+	width: 250px;
+}
+*/

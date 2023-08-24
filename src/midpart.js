@@ -1,11 +1,16 @@
 import React from 'react';
 import img from './img/img.webp'
+import Change from './imgchange.js'
+
 function Midpart() {
+
   return (
 
    <div className='container'>
    <div className='right'>
+   <Change>
         <img src="./img/img.webp" alt="Description" />
+        </Change>
 </div>
    <div className='text'>
    <h1>ASH<br />

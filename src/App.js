@@ -3,7 +3,10 @@ import Navbar from './navbar.js';
 import Midpart from './midpart.js';
 import Loader from './loader';
 import Show from './show.js'
+import Change from './imgchange.js'
+import Footer from './footer.js'
 import './App.css';
+
 
 import './navbar.css';
 
