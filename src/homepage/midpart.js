@@ -1,5 +1,5 @@
 import React from 'react';
-import img from './img/img.webp'
+import img from '../img/img.webp'
 import Change from './imgchange.js'
 
 function Midpart() {

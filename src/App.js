@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from 'react';
-import Navbar from './navbar.js';
-import Midpart from './midpart.js';
-import Loader from './loader';
-import Show from './show.js'
-import Change from './imgchange.js'
-import Footer from './footer.js'
+import Navbar from './common/navbar.js';
+import Midpart from './homepage/midpart.js';
+import Loader from './homepage/loader';
+import Show from './homepage/show.js'
+import Change from './homepage/imgchange.js'
+import Footer from './common/footer.js'
 import './App.css';
-import './navbar.css';
-import './footer.css';
+import './common/navbar.css';
+import './common/footer.css';
 
 
 
