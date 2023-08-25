@@ -6,9 +6,10 @@ import Show from './show.js'
 import Change from './imgchange.js'
 import Footer from './footer.js'
 import './App.css';
-
-
 import './navbar.css';
+import './footer.css';
+
+
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -18,7 +19,6 @@ function App() {
     const timer = setTimeout(() => {
       setIsLoading(false); // Hide loader after 3 seconds
     }, 3000);
-
     return () => clearTimeout(timer); // Cleanup the timer if the component is unmounted
   }, []);
 
@@ -31,6 +31,7 @@ function App() {
       <Navbar />
       <Midpart />
       <Show />
+      <Footer / >
     </div>
   );
 }

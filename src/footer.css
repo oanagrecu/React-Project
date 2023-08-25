@@ -1,0 +1,12 @@
+.foot{
+	display: flex;
+	justify-content: space-between;
+	line-height: 50px;
+	height: 1315px;
+}
+.block1{
+	flex-basis: 20%;
+	line-height: 33px;
+	padding-top: 14px;
+}
+

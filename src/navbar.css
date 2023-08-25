@@ -39,6 +39,8 @@ a {
 	border-radius: 14px;
 	height: 659px;
 	width: 463px;
+    opacity: 1;
+  transition: opacity 500ms ease-in;
 }
 
 .text p{
