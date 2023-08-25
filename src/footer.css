@@ -2,11 +2,15 @@
 	display: flex;
 	justify-content: space-between;
 	line-height: 50px;
-	height: 1315px;
+	height: 70vh;
 }
 .block1{
 	flex-basis: 20%;
 	line-height: 33px;
 	padding-top: 14px;
 }
-
+.copy{
+	font-size: 29px;
+	font-family: Indie Flower;
+	color: #C38E77;
+}

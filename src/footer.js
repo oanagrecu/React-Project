@@ -2,31 +2,40 @@ import React from "react";
 
 const Footer = () => {
     return (
-        <footer className ='foot'>
-            <div className= ' block1'>
-            <p>SHOP INFORMATION
-DEPECHE.Ove Jensens Allé 338700 Horsens+45 70 22 98 89Denmark
-CVR. 31251699
-</p>
+        <>
+            <footer className='foot'>
+                <div className='block1'>
+                    <p>SHOP INFORMATION
+                       DEPECHE.Ove Jensens Allé 33
+                       8700 Horsens+45 70 22 98 89
+                       Denmark
+                       CVR. 31251699
+                    </p>
+                </div>
+                <div className='block2'>
+                    <p>Customer information</p>
+                    <p>Help and support</p>
+                    <p>Shipping and delivery</p>
+                    <p>Payment method</p>
+                    <p>Terms and conditions</p>
+                    <p>Returns and refunds</p>
+                    <p>Privacy policy</p>
+                </div>
+                <div className='block3'>
+                    <p>ASH MAD on Social Networks</p> 
+                    <p>Facebook</p> 
+                    <p>Twitter</p> 
+                    <p>LinkedIn</p> 
+                    <p>Instagram</p> 
+                    <p>Pinterest</p> 
+                </div>
+            </footer>
+            <div className= 'copy' >
+                <p>
+                    COPYRIGHT © 2023  <bold style={{color: "white"}} >ASH</bold> MADEMOISELLE
+                </p> 
             </div>
-            <div className= 'block2'>
-            <p>Customer information</p>
-            <p>Help and support</p>
-            <p>Shipping and delivery</p>
-            <p>Payment method</p>
-            <p>Terms and conditions</p>
-            <p>Returns and refunds</p>
-            <p>Privacy policy</p>
-            </div>
-            <div className='block3'>
-             <p>ASH MAD on Social Networks</p> 
-             <p>Facebook</p> 
-             <p>Twitter</p> 
-             <p>LinkedIn</p> 
-             <p>Instagram</p> 
-             <p>Pinterest</p> 
-             </div>
-        </footer>
+        </>
     );
 };
 
