@@ -4,7 +4,7 @@ function Show() {
    const [imageURL, setImageURL] = useState([]);
 
     useEffect(() => {
-    fetch(`https://api.unsplash.com/photos/random?count=6&client_id=kSKQnT_OVmFHJsf-C1aytdwzDpo8Hzk5ARfztrBmHhY`)
+fetch(`https://api.com`)
             .then((response) => response.json())
             .then((actualData) => {
               const allImgs = actualData.map(photo =>  photo.urls.full)
