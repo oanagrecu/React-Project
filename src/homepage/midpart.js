@@ -1,9 +1,8 @@
-import React from 'react';
+import React from "react";
 import img from '../img/img.webp'
 import Change from './imgchange.js'
 
 function Midpart() {
-
   return (
 
    <div className='container'>
@@ -21,6 +20,7 @@ function Midpart() {
    </div>
    </div>
   );
+
 }
 
 export default Midpart;

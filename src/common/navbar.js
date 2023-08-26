@@ -1,19 +1,20 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 
 function Navbar() {
   return (
     <nav>
-    <div className='logo'>
-    logo
-     </div>
+      <div className='logo'>
+        logo
+      </div>
       <ul>
-          <li><a href="/">Collection</a></li>
-        <li><a href="/about">About</a></li>
-        <li><a href="/contact">Contact</a></li>
-        <li><a href="/contact">Cart</a></li>
+        <li><NavLink exact to="/" activeClassName="active">Collection</NavLink></li>
+        <li><NavLink to="/about" activeClassName="active">About</NavLink></li>
+        <li><NavLink to="/contact" activeClassName="active">Contact</NavLink></li>
+        <li><NavLink to="/cart" activeClassName="active">Cart</NavLink></li>
       </ul>
     </nav>
   );
 }
-                   
+
 export default Navbar;

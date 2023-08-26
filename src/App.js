@@ -1,15 +1,15 @@
 import React, { useState, useEffect } from 'react';
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import Navbar from './common/navbar.js';
 import Midpart from './homepage/midpart.js';
 import Loader from './homepage/loader';
 import Show from './homepage/show.js'
 import Change from './homepage/imgchange.js'
 import Footer from './common/footer.js'
+import Proudct from './proudctpage/product.js'
 import './App.css';
 import './common/navbar.css';
 import './common/footer.css';
-
-
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -27,12 +27,22 @@ function App() {
   }
 
   return (
-    <div className="App">
-      <Navbar />
-      <Midpart />
-      <Show />
-      <Footer / >
-    </div>
+    <Router>
+      <div className="App">
+        <Navbar />
+        <Routes>
+          <Route path="/" element={
+            <>
+              <Midpart />
+              <Show />
+              <Footer />
+            </>
+          } />
+          <Route path="/about" element={<Proudct />} />
+        </Routes>
+      </div>
+    </Router>
   );
 }
-export default App
+
+export default App;

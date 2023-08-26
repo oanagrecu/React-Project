@@ -22,3 +22,21 @@
 	display: flex;
 	flex-direction: column;
 }
+.big-img img {
+	width: 369px;
+	height: 705px;
+}
+
+.small-img img {
+	width: 404px;
+	height: 341px;
+}
+
+.bigger{
+	width: 391px;
+	height: 482px;
+}
+.smaller{
+	width: 391px;
+	height: 195px;
+}
