@@ -4,10 +4,11 @@ function Show() {
    const [imageURL, setImageURL] = useState([]);
 
     useEffect(() => {
-fetch(`https://api.com`)
+  fetch(`https://api.unsplash.com/search/photos?query=fashion&per_page=6&client_id=//`)
             .then((response) => response.json())
             .then((actualData) => {
-              const allImgs = actualData.map(photo =>  photo.urls.full)
+                console.log('Data from API:', actualData);
+              const allImgs = actualData.results.map(photo =>  photo.urls.full)
               setImageURL(allImgs)
            console.log('data:::',allImgs)
 

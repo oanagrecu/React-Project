@@ -38,7 +38,7 @@ function App() {
               <Footer />
             </>
           } />
-          <Route path="/about" element={<Proudct />} />
+          <Route path="/Collection" element={<Proudct />} />
         </Routes>
       </div>
     </Router>
