@@ -6,7 +6,7 @@ import './proudct.css';
 function Prodct() {
   const [data,setData] = useState([]);
     useEffect(() => {
-        fetch(`https://api.unsplash.com/photos/random?count=12&client_id=kSKQnT_OVmFHJsf-C1aytdwzDpo8Hzk5ARfztrBmHhY`)
+        fetch(`/products`)
             .then((response) => response.json())
             .then((actualData) => {
                 console.log('Data from API:', actualData);
@@ -25,10 +25,10 @@ function Prodct() {
                 {data.map((item, index) => (
                     <div className='testing' key={index}>
                        <Link to={{
-            pathname: `/product/${item.id}`,
+            pathname: `/product/${item.reference}`,
                state: { item: item }
               }}>
-          <img src={item.urls.full} />
+          <img src={item.image} />
 
                         </Link>
                         <p>{item.alt_description || 'nothing for the moment'}</p>
