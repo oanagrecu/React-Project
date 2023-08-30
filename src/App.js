@@ -1,4 +1,30 @@
 <<<<<<< HEAD
+import React from "react";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+// import Navbar from "./components/Navbar";
+// import Footer from "./components/Footer";
+// import Home from "./pages/Home";
+// import Collection from "./pages/Collection";
+import About from "./pages/About";
+import Contact from "./pages/Contact";
+import Cart from "./pages/Cart";
+
+function App() {
+  return (
+    <Router>
+      <div>
+       
+        <Routes>
+          {/* <Route path="/" element={<Home />} /> */}
+          <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<Contact />} />
+           <Route path="/cart" element={<Cart />} />
+        </Routes>
+        {/* <Footer /> */}
+      </div>
+    </Router>
+=======
+<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import Navbar from './common/navbar.js';
@@ -49,10 +75,13 @@ function App() {
       </div>
     </Router>
       </ProductProvider>
+>>>>>>> 40a0444ea8ce71f24091c563a5ca525028366fb3
   );
 }
 
 export default App;
+<<<<<<< HEAD
+=======
 =======
 import logo from './logo.svg';
 import './App.css';
@@ -80,3 +109,4 @@ function App() {
 
 export default App;
 >>>>>>> 9c81f86 (first)
+>>>>>>> 40a0444ea8ce71f24091c563a5ca525028366fb3
