@@ -1,12 +1,12 @@
 import React from "react";
-import Navbar from "../common/Navbar";
+// import Navbar from "../common/Navbar";
 // import FooterBottom from "../common/FooterBottom";
 import logo from "../img/facebook.png";
 import "./Cart.css";
 function Cart() {
   return (
     <div>
-      <Navbar />
+      
       <div class="container">
         <h1>Shopping Cart</h1>
         <div className="shopping-cart">
