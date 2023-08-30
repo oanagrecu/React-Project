@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
   "name": "alize-webhopv",
   "version": "0.1.0",
   "private": true,
@@ -14,6 +15,16 @@
     "react-scripts": "5.0.1",
     "react-transition-group": "^4.4.5",
     "web-vitals": "^2.1.4"
+=======
+  "name": "projectecommerce",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "cra-template": "1.2.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-scripts": "5.0.1"
+>>>>>>> 9c81f86 (first)
   },
   "scripts": {
     "start": "react-scripts start",
