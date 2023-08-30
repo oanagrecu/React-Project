@@ -1,0 +1,45 @@
+body {
+  font-family: "Times New Roman", Times, serif;
+  margin: 0;
+  padding: 0;
+}
+
+.aboutContainer {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+   height: 100%; 
+  background: black;
+  width: 100%;
+}
+.aboutImage {
+  max-width: 40%; 
+  height: auto; 
+}
+
+.citeName {
+  color: #c38e77;
+}
+p.about {
+  font-family: "Times New Roman", Times, serif;
+  font-weight: 400;
+  font-size: 22px;
+  color: white;
+  align-items: center;
+  justify-content: center;
+  text-align: justify;
+  height: 50%;
+  width: 70%;
+  padding: 20px;
+  margin: 20px 0;
+  line-height: 1.6;
+}
+
+h1 {
+  font-family: "Times New Roman", Times, serif;
+  font-weight: 500;
+  font-size: 60px;
+  color: white;
+  text-align: center;
+}
