@@ -3,16 +3,18 @@ import ProductContext from './ProductContext';
 import './proudctData.css'
 
 function ProductDetail() {
-    const { selectedProduct } = useContext(ProductContext);
+    const { selectedProduct, addToCart } = useContext(ProductContext);
 
     if (!selectedProduct) return <div>No product selected</div>;
 
     return (
         <div>
-            <img className= 'img-dit'  src={selectedProduct.urls.full} />
-            {/* ... display other details ... */}
+            <img className= 'img-dit'  src={selectedProduct.image} />
+            <p>{selectedProduct.name}</p>
+            <button onClick={() => addToCart(selectedProduct)}>
+                Add to cart
+            </button>        
         </div>
     );
 }
-
 export default ProductDetail;

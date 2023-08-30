@@ -10,7 +10,7 @@ function Prodct() {
     const { setSelectedProduct } = useContext(ProductContext); 
 
     useEffect(() => {
-            fetch(`https://api.unsplash.com/photos/random?count=12&query=fashion&client_id=kSKQnT_OVmFHJsf-C1aytdwzDpo8Hzk5ARfztrBmHhY`)
+            fetch(`/products`)
             .then((response) => response.json())
             .then((actualData) => {
                 console.log('testttt',actualData);
@@ -20,7 +20,6 @@ function Prodct() {
                 console.log(err.message);
             });
     }, []);
-
     return (
         <div>
             <div className='colc-text'>
@@ -30,13 +29,13 @@ function Prodct() {
                 {data.map((item, index) => (
                     <div className='testing' key={index}>
                         <Link 
-                            to={`/Collection/${item.id}`}
+                            to={`/Collection/${item.reference}`}
                             onClick={() => setSelectedProduct(item)}
                         >
-                            <img src={item.urls.full} />
+                            <img src={item.image} />
                         </Link>
-                        <p>{item.alt_description || 'nothing for the moment'}</p>
-                        <p>price</p>
+                        <p>{item.name || 'nothing for the moment'}</p>
+                        <p>{item.price.$numberDecimal}</p>
                     </div>
                 ))}
             </div>
