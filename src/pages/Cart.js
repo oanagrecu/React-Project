@@ -7,7 +7,7 @@ function Cart() {
   return (
     <div>
       
-      <div class="container">
+      <div className="cartContainer">
         <h1>Shopping Cart</h1>
         <div className="shopping-cart">
           <div className="column-labels">
