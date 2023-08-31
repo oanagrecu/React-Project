@@ -10,7 +10,7 @@
   flex-direction: column;
   align-items: center;
    height: 100%; 
-  background: black;
+margin-top: 30px;
   width: 100%;
 }
 .aboutImage {

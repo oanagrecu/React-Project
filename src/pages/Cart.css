@@ -8,6 +8,7 @@
   max-width: 1200px;
   margin: 0 auto;
   padding: 20px;
+  margin-bottom: 100px;
 }
 .product-image {
   float: left;
@@ -83,6 +84,7 @@ label {
 }
 
 .product-quantity input {
+  color:black;
   width: 40px;
 }
 

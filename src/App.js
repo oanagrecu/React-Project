@@ -13,6 +13,7 @@ import ProductDetail from "./proudctpage/proudctData.js";
 import "./App.css";
 import "./common/navbar.css";
 import "./common/footer.css";
+// import FooterBottom from "./common/FooterBottom";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Cart from "./pages/Cart";
@@ -44,6 +45,7 @@ function App() {
                   <Midpart />
                   <Show />
                   <Footer />
+                  
                 </>
               }
             />

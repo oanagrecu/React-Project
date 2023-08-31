@@ -1,6 +1,6 @@
 import React from "react";
 // import Navbar from "../common/Navbar";
-// import FooterBottom from "../common/FooterBottom";
+ import FooterBottom from "../common/FooterBottom";
 import "./About.css";
 import logo from "../img/leather-image.jpg";
 function About() {
@@ -47,6 +47,7 @@ function About() {
           pellentesque adipiscing commodo elit at.
         </p>
       </div>
+      <FooterBottom />
     </div>
   );
 }

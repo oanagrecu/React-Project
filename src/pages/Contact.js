@@ -1,12 +1,12 @@
 import React from "react";
 // import Navbar from "../common/Navbar";
-// import FooterBottom from "../common/FooterBottom";
+import FooterBottom from "../common/FooterBottom";
 import "./Contact.css";
 
 function Contact() {
   return (
     <div>
-      <section class="contactSection">
+      <section className="contactSection">
         <div className="contactContainer">
           <h1>Get in Touch</h1>
           <h2>Send me a message using this form!</h2>
@@ -64,6 +64,7 @@ function Contact() {
           </div>
         </div>
       </section>
+      <FooterBottom />
     </div>
   );
 }
