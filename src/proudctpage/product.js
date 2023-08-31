@@ -1,15 +1,19 @@
-import { useState, useEffect } from "react";
+// Prodct.js
+import { useState, useEffect, useContext } from "react";
 import { Link } from 'react-router-dom';
+import ProductContext from './ProductContext';
 
 import './proudct.css';
 
 function Prodct() {
-  const [data,setData] = useState([]);
+    const [data, setData] = useState([]);
+    const { setSelectedProduct } = useContext(ProductContext); 
+
     useEffect(() => {
-        fetch(`/products`)
+            fetch(`/products`)
             .then((response) => response.json())
             .then((actualData) => {
-                console.log('Data from API:', actualData);
+                console.log('testttt',actualData);
                 setData(actualData);
             })
             .catch((err) => {
@@ -24,21 +28,19 @@ function Prodct() {
             <div className='Prodct-conatiner'>
                 {data.map((item, index) => (
                     <div className='testing' key={index}>
-                       <Link to={{
-            pathname: `/product/${item.reference}`,
-               state: { item: item }
-              }}>
-          <img src={item.image} />
-
+                        <Link 
+                            to={`/product/${item.reference}`}
+                            onClick={() => setSelectedProduct(item)}
+                        >
+                            <img src={item.image.name} />
                         </Link>
-                        <p>{item.alt_description || 'nothing for the moment'}</p>
-                        <p>price</p>
+                        <p>{item.name || 'nothing for the moment'}</p>
+                        <p>{item.price.$numberDecimal}</p>
                     </div>
                 ))}
             </div>
         </div>
     );
 }
-
 
 export default Prodct;
