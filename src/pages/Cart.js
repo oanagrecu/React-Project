@@ -1,12 +1,11 @@
 import React from "react";
 // import Navbar from "../common/Navbar";
-// import FooterBottom from "../common/FooterBottom";
+import FooterBottom from "../common/FooterBottom";
 import logo from "../img/facebook.png";
 import "./Cart.css";
 function Cart() {
   return (
     <div>
-      
       <div className="cartContainer">
         <h1>Shopping Cart</h1>
         <div className="shopping-cart">
@@ -82,6 +81,7 @@ function Cart() {
           <button className="checkout">Checkout</button>
         </div>
       </div>
+      <FooterBottom />
     </div>
   );
 }
