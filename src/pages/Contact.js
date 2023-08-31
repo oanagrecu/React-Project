@@ -1,18 +1,15 @@
 import React from "react";
-import Navbar from "../common/Navbar";
-import FooterBottom from "../common/FooterBottom";
+// import Navbar from "../common/Navbar";
+// import FooterBottom from "../common/FooterBottom";
 import "./Contact.css";
 
 function Contact() {
   return (
     <div>
-      <Navbar />
-      <section>
-        <div className="container">
+      <section class="contactSection">
+        <div className="contactContainer">
           <h1>Get in Touch</h1>
-          <h2>
-             Send me a message using this form!
-          </h2>
+          <h2>Send me a message using this form!</h2>
           <div className="row">
             <div className="col">
               <div className="input">
@@ -50,7 +47,7 @@ function Contact() {
 
           <div className="row">
             <div className="col">
-              <div className="input textarea">
+              <div className="input">
                 <textarea name="message" required></textarea>
                 <span className="text">Your Message</span>
                 <span className="line"></span>
@@ -67,7 +64,6 @@ function Contact() {
           </div>
         </div>
       </section>
-      <FooterBottom />
     </div>
   );
 }
