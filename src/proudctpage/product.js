@@ -22,7 +22,7 @@ function Prodct() {
     }, []);
     return (
         <div>
-            <div className='colc-text'>
+            <div className='colc-text text-3xl font-bold underline'>
                 <h1>COLLECTION</h1>
             </div>
             <div className='Prodct-conatiner'>

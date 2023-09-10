@@ -10,8 +10,6 @@ function ProductDetail() {
 
     if (!selectedProduct) return <div>No product selected</div>
 
-
-
     return (
                 <div>
         <img className='img-dit' src={`/images/${selectedProduct.image.name}`} />

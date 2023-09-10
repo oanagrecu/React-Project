@@ -17,8 +17,7 @@
     "react-transition-group": "^4.4.5",
     "web-vitals": "^2.1.4"
   },
-    "proxy": "https://ashmademoiselle-8623d0938879.herokuapp.com",
-
+  "proxy": "https://ashmademoiselle-8623d0938879.herokuapp.com",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
@@ -42,5 +41,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.3.3"
   }
 }
