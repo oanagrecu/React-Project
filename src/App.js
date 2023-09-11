@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import Navbar from "./common/Navbar.js";
 import Midpart from "./homepage/midpart.js";
-import Loader from "./homepage/loader";
+import LoaderComp from "./homepage/loader";
 import Show from "./homepage/show.js";
 import Change from "./homepage/imgchange.js";
 import Footer from "./common/footer.js";
@@ -18,6 +18,7 @@ import "./common/footer.css";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Cart from "./pages/Cart";
+
 function App() {
   const [isLoading, setIsLoading] = useState(true);
 
@@ -30,7 +31,7 @@ function App() {
   }, []);
 
   if (isLoading) {
-    return <Loader />;
+    return <LoaderComp />;
   }
 
   return (

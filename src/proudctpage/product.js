@@ -1,4 +1,3 @@
-// Prodct.js
 import { useState, useEffect, useContext } from "react";
 import { Link } from "react-router-dom";
 import ProductContext from "./ProductContext";
@@ -32,10 +31,7 @@ function Prodct() {
               to={`/product/${item.reference}`}
               onClick={() => setSelectedProduct(item)}
             >
-              <img
-                src={`${item.image.name}`}
-                alt={item.name || "nothing for the moment"}
-              />
+              <img src={item.image.name} />
             </Link>
             <p>{item.name || "nothing for the moment"}</p>
             <p>{item.price.$numberDecimal}</p>
