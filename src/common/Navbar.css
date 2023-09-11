@@ -1,0 +1,38 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: black;
+  color: white;
+  font-family:'Times New Roman', Times, serif;
+}
+.logo img {
+  width: 120px; /* Adjust the width as needed */
+  height: auto;
+}
+.logo {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+ul {
+  list-style-type: none;
+  text-align: right;
+  padding: 0;
+  margin: 0;
+  display: inline-block;
+  width: 96%;
+}
+
+li {
+  display: inline;
+  padding-right: 40px;
+}
+
+a {
+  text-decoration: none;
+  color: #ffffff;
+  font-family:'Times New Roman', Times, serif;
+  font-size: 1.2rem;
+}
