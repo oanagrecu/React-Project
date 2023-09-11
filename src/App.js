@@ -18,9 +18,7 @@ import "./common/footer.css";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Cart from "./pages/Cart";
-import "./App.css";
-import "./common/navbar.css";
-import "./common/footer.css";
+
 // import FooterBottom from "./common/FooterBottom";
 function App() {
   const [isLoading, setIsLoading] = useState(true);
