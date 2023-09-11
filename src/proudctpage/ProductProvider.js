@@ -12,7 +12,6 @@ const ProductProvider = ({ children }) => {
           return null;
       }
     });
-
     const [cart, setCart] = useState(() => {
       try {
           const savedCart = localStorage.getItem('cart');
@@ -22,7 +21,7 @@ const ProductProvider = ({ children }) => {
           return [];
       }
     });
-
+    
     useEffect(() => {
         
         if (selectedProduct) {
@@ -34,7 +33,13 @@ const ProductProvider = ({ children }) => {
     const addToCart = (product) => {
         setCart(prevCart => Array.isArray(prevCart) ? [...prevCart, product] : [product]);
         console.log('the products are :', product.reference);
-    };
+    };  
+
+
+const removeFromCart = (productToRemove) => {
+    setCart(prevCart => prevCart.filter(product => product._id !== productToRemove._id));
+};
+
 
     return (
         <ProductContext.Provider 
@@ -42,7 +47,8 @@ const ProductProvider = ({ children }) => {
                 selectedProduct, 
                 setSelectedProduct,
                 cart,
-                addToCart 
+                addToCart,
+                removeFromCart
             }}
         >
             {children}
