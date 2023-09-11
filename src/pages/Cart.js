@@ -2,6 +2,7 @@ import React from "react";
 // import Navbar from "../common/Navbar";
 import FooterBottom from "../common/FooterBottom";
 import logo from "../img/facebook.png";
+// import "./mini.css";
 import "./Cart.css";
 function Cart() {
   return (
@@ -19,7 +20,11 @@ function Cart() {
           </div>
           <div className="product">
             <div className="product-image">
-              <img src={logo} alt="Leather" className="aboutImage" />
+              <img
+                src={logo}
+                alt={logo}
+                className="aboutImage"
+              />
             </div>
             <div className="product-details">
               <div className="product-title">jacket</div>
@@ -27,7 +32,13 @@ function Cart() {
             </div>
             <div className="product-price">12.99</div>
             <div className="product-quantity">
-              <input type="number" value="" min="" />
+              <input
+                type="number"
+                id="quantity"
+                name="quantity"
+                min="1"
+                max="5"
+              />
             </div>
             <div className="product-removal">
               <button className="remove-product">Remove</button>
@@ -44,7 +55,13 @@ function Cart() {
             </div>
             <div className="product-price">45.99</div>
             <div className="product-quantity">
-              <input type="number" value="1" min="1" />
+              <input
+                type="number"
+                id="quantity"
+                name="quantity"
+                min="1"
+                max="5"
+              />
             </div>
             <div className="product-removal">
               <button className="remove-product">Remove</button>
@@ -59,27 +76,21 @@ function Cart() {
                 71.97
               </div>
             </div>
-            <div className="totals-item">
-              <label>Tax (5%)</label>
-              <div className="totals-value" id="cart-tax">
-                3.60
-              </div>
-            </div>
-            <div className="totals-item">
-              <label>Shipping</label>
-              <div className="totals-value" id="cart-shipping">
-                15.00
-              </div>
-            </div>
-            <div className="totals-item totals-item-total">
-              <label>Grand Total</label>
-              <div className="totals-value" id="cart-total">
-                90.57
-              </div>
+          </div>
+          <div className="totals-item">
+            <label>Shipping</label>
+            <div className="totals-value" id="cart-shipping">
+              15.00
             </div>
           </div>
-          <button className="checkout">Checkout</button>
+          <div className="totals-item totals-item-total">
+            <label>Grand Total</label>
+            <div className="totals-value" id="cart-total">
+              90.57
+            </div>
+          </div>
         </div>
+        <button className="checkout">Checkout</button>
       </div>
       <FooterBottom />
     </div>
