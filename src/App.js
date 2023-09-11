@@ -4,7 +4,7 @@ import Navbar from "./common/Navbar.js";
 import Midpart from "./homepage/midpart.js";
 import Loader from "./homepage/loader";
 import Show from "./homepage/show.js";
-// import Change from "./homepage/imgchange.js";
+import Change from "./homepage/imgchange.js";
 import Footer from "./common/footer.js";
 import Proudct from "./proudctpage/product.js";
 import ProductProvider from "./proudctpage/ProductProvider";
@@ -18,8 +18,6 @@ import "./common/footer.css";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Cart from "./pages/Cart";
-
-// import FooterBottom from "./common/FooterBottom";
 function App() {
   const [isLoading, setIsLoading] = useState(true);
 
@@ -54,11 +52,11 @@ function App() {
             />
             <Route path="/Collection" element={<CartShow />} />
             <Route path="/product/:id" element={<ProductDetail />} />
-            {/* <Route path="/cart" element={<Minin />} /> */}
+            <Route path="/cart" element={<Minin />} />
             <Route path="/test" element={<Testr />} />
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
-            <Route path="/cart" element={<Cart />} />
+            {/* <Route path="/cart" element={<Cart />} /> */}
           </Routes>
         </div>
       </Router>
