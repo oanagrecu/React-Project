@@ -53,11 +53,11 @@ function App() {
             />
             <Route path="/Collection" element={<CartShow />} />
             <Route path="/product/:id" element={<ProductDetail />} />
-            <Route path="/cart" element={<Minin />} />
+            {/* <Route path="/cart" element={<Minin />} /> */}
             <Route path="/test" element={<Testr />} />
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
-            {/* <Route path="/cart" element={<Cart />} /> */}
+            <Route path="/cart" element={<Cart />} />
           </Routes>
         </div>
       </Router>

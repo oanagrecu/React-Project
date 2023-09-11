@@ -11,18 +11,19 @@ function Contact() {
           <h1>Get in Touch</h1>
           <h2>Send me a message using this form!</h2>
           <div className="row">
+
             <div className="col">
               <div className="input">
-                <input type="text" name="firstName" required />
-                <span className="text">First Name</span>
+                <input type="text" name="Name" required />
+                <span className="text">Name</span>
                 <span className="line"></span>
               </div>
             </div>
 
             <div className="col">
               <div className="input">
-                <input type="text" name="lastName" required />
-                <span className="text">Last Name</span>
+                <input type="email" name="email" required />
+                <span className="text">Email</span>
                 <span className="line"></span>
               </div>
             </div>
@@ -31,19 +32,13 @@ function Contact() {
           <div className="row">
             <div className="col">
               <div className="input">
-                <input type="email" name="email" required />
-                <span className="text">Email</span>
-                <span className="line"></span>
-              </div>
-            </div>
-            <div className="col">
-              <div className="input">
-                <input type="text" name="mobile" required />
-                <span className="text">Country</span>
+                <textarea name="subject" required></textarea>
+                <span className="text">Subject</span>
                 <span className="line"></span>
               </div>
             </div>
           </div>
+
 
           <div className="row">
             <div className="col">
