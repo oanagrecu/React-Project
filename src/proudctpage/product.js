@@ -26,15 +26,15 @@ function Prodct() {
       </div>
       <div className="Prodct-conatiner">
         {data.map((item, index) => (
-          <div className="testing" key={index}>
+          <div className="testing" key={item.reference}>
             <Link
               to={`/product/${item.reference}`}
               onClick={() => setSelectedProduct(item)}
             >
               <img src={item.image.name} />
-         
-            <p>{item.name || "nothing for the moment"}</p>
-            <p>{item.price.$numberDecimal}</p>
+
+              <p>{item.name || "nothing for the moment"}</p>
+              <p>{item.price.$numberDecimal}</p>
             </Link>
           </div>
         ))}

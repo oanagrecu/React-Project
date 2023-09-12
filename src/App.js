@@ -17,7 +17,7 @@ import "./common/navbar.css";
 import "./common/footer.css";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
-// import Cart from "./pages/Cart";
+import Cart from "./pages/Cart";
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -47,17 +47,18 @@ function App() {
                   <Midpart />
                   <Show />
                   <Footer />
+                  <Cart />
                   <Minin />
                 </>
               }
             />
             <Route path="/Collection" element={<CartShow />} />
             <Route path="/product/:id" element={<ProductDetail />} />
-            <Route path="/cart" element={<Minin />} />
+            {/* <Route path="/cart" element={<Minin />} /> */}
             <Route path="/test" element={<Testr />} />
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
-            {/* <Route path="/cart" element={<Cart />} /> */}
+            <Route path="/cart" element={<Cart />} />
           </Routes>
         </div>
       </Router>

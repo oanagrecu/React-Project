@@ -46,7 +46,7 @@ function Minin() {
             ))}
           </ul>
 
-          {/* <div className="space-y-4 text-center">
+          <div className="space-y-4 text-center">
             <a
               href="#"
               className="block rounded border border-gray-600 px-5 py-3 text-sm text-gray-600 transition hover:ring-1 hover:ring-gray-400"
@@ -67,7 +67,7 @@ function Minin() {
             >
               Continue shopping
             </a>
-          </div> */}
+          </div>
         </div>
       </div>
     </div>

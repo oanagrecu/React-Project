@@ -1,10 +1,11 @@
 import React, { useContext } from "react";
-import ProductContext from "./ProductContext";
+import ProductContext from "../proudctpage/ProductContext.js";
 
 function Cart() {
   const { cart, removeFromCart, updateQuantity } = useContext(ProductContext);
 
   const handleRemove = (productId) => {
+    console.log("Removing product with ID:", productId);
     removeFromCart(productId);
   };
 
