@@ -11,7 +11,6 @@ function Contact() {
           <h1>Get in Touch</h1>
           <h2>Send me a message using this form!</h2>
           <div className="row">
-
             <div className="col">
               <div className="input">
                 <input type="text" name="Name" required />
@@ -38,7 +37,6 @@ function Contact() {
               </div>
             </div>
           </div>
-
 
           <div className="row">
             <div className="col">

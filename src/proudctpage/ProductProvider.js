@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import ProductContext from "./ProductContext";
 
 const ProductProvider = ({ children }) => {
-  // Initializeof selectedProduct from localStorage
+  // Initialize selectedProduct from localStorage
   const [selectedProduct, setSelectedProduct] = useState(() => {
     try {
       const savedProduct = localStorage.getItem("selectedProduct");
@@ -12,6 +12,8 @@ const ProductProvider = ({ children }) => {
       return null;
     }
   });
+
+  // Initialize cart from localStorage
   const [cart, setCart] = useState(() => {
     try {
       const savedCart = localStorage.getItem("cart");
@@ -33,13 +35,22 @@ const ProductProvider = ({ children }) => {
     setCart((prevCart) =>
       Array.isArray(prevCart) ? [...prevCart, product] : [product]
     );
-    console.log("the products are :", product.reference);
   };
 
-  const removeFromCart = (productToRemove) => {
+  const removeFromCart = (productId) => {
     setCart((prevCart) =>
-      prevCart.filter((product) => product._id !== productToRemove._id)
+      prevCart.filter((product) => product._id !== productId)
     );
+  };
+
+  const updateQuantity = (productId, newQuantity) => {
+    const updatedCart = cart.map((product) => {
+      if (product._id === productId) {
+        return { ...product, quantity: newQuantity };
+      }
+      return product;
+    });
+    setCart(updatedCart);
   };
 
   return (
@@ -50,6 +61,7 @@ const ProductProvider = ({ children }) => {
         cart,
         addToCart,
         removeFromCart,
+        updateQuantity,
       }}
     >
       {children}

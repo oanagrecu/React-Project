@@ -32,9 +32,10 @@ function Prodct() {
               onClick={() => setSelectedProduct(item)}
             >
               <img src={item.image.name} />
-            </Link>
+         
             <p>{item.name || "nothing for the moment"}</p>
             <p>{item.price.$numberDecimal}</p>
+            </Link>
           </div>
         ))}
       </div>
