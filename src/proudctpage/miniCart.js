@@ -9,21 +9,7 @@ function Minin() {
     <div className="list-conta">
       <div className="relative w-screen max-w-sm border border-gray-600 bg-gray-100 px-4 py-8 sm:px-6 lg:px-8">
         <button className="absolute end-4 top-4 text-gray-600 transition hover:scale-110">
-          <span className="sr-only">Close cart</span>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            strokeWidth="1.5"
-            stroke="currentColor"
-            className="h-5 w-5"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              d="M6 18L18 6M6 6l12 12"
-            />
-          </svg>
+          Close cart
         </button>
 
         <div className="mt-4 space-y-6">
@@ -52,7 +38,7 @@ function Minin() {
                   </dl>
                   <dd>
                     <button onClick={() => removeFromCart(product)}>
-                      Remove from cart
+                      Add to cart
                     </button>
                   </dd>
                 </div>
@@ -60,7 +46,7 @@ function Minin() {
             ))}
           </ul>
 
-          <div className="space-y-4 text-center">
+          {/* <div className="space-y-4 text-center">
             <a
               href="#"
               className="block rounded border border-gray-600 px-5 py-3 text-sm text-gray-600 transition hover:ring-1 hover:ring-gray-400"
@@ -81,7 +67,7 @@ function Minin() {
             >
               Continue shopping
             </a>
-          </div>
+          </div> */}
         </div>
       </div>
     </div>
