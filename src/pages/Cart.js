@@ -2,8 +2,24 @@ import React, { useContext } from "react";
 import ProductContext from "../proudctpage/ProductContext.js";
 import FooterBottom from "../common/FooterBottom";
 import "./Cart.css";
+
 function Cart() {
   const { cart, removeFromCart, updateQuantity } = useContext(ProductContext);
+
+  // Function to calculate the subtotal of the cart
+  const calculateSubtotal = () => {
+    return cart.reduce((total, product) => {
+      return (
+        total + parseFloat(product.price.$numberDecimal) * product.quantity
+      );
+    }, 0);
+  };
+
+  // Shipping fee
+  const shippingFee = 15.0; // Change this to your shipping fee
+
+  // Calculate the total (subtotal + shipping)
+  const total = calculateSubtotal() + shippingFee;
 
   const handleRemove = (productId) => {
     console.log("Removing product with ID:", productId);
@@ -60,7 +76,27 @@ function Cart() {
           </div>
         </div>
       ))}
-
+      <div className="totals">
+        <div className="totals-item">
+          <label>Subtotal</label>
+          <div className="totals-value" id="cart-subtotal">
+            {calculateSubtotal().toFixed(2)} EUR
+          </div>
+        </div>
+        <div className="totals-item">
+          <label>Shipping</label>
+          <div className="totals-value" id="cart-shipping">
+            {shippingFee.toFixed(2)} EUR
+          </div>
+        </div>
+        <div className="totals-item totals-item-total">
+          <label>Grand Total</label>
+          <div className="totals-value" id="cart-total">
+            {total.toFixed(2)} EUR
+          </div>
+        </div>
+      </div>
+      <button className="checkout">Checkout</button>
       <FooterBottom />
     </div>
   );
