@@ -8,11 +8,9 @@ function ProductDetail() {
   const { selectedProduct, addToCart } = useContext(ProductContext);
 
   if (!selectedProduct) return <div>No product selected</div>;
-  const imageUrl = `/images/${selectedProduct.image.name}`;
   return (
     <div>
-      {/* Use the imageUrl as the src attribute for the image */}
-      <img className="img-dit" src={imageUrl} alt={selectedProduct.name} />
+      <img className="img-dit" src={selectedProduct.imageURL} />
       <p>{selectedProduct.name}</p>
       <button onClick={() => addToCart(selectedProduct)}>Add to cart</button>
 

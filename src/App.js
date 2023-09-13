@@ -47,7 +47,6 @@ function App() {
                   <Midpart />
                   <Show />
                   <Footer />
-                  <Cart />
                   <Minin />
                 </>
               }
@@ -65,5 +64,4 @@ function App() {
     </ProductProvider>
   );
 }
-
 export default App;

@@ -37,7 +37,7 @@ function Cart() {
         <div className="product" key={product._id}>
           <div className="product-image">
             <img
-              src={product.image.name}
+              src={product.imageURL}
               alt={product.name}
               className="aboutImage"
             />
