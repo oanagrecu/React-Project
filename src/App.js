@@ -8,7 +8,7 @@ import Change from "./homepage/imgchange.js";
 import Footer from "./common/footer.js";
 import Proudct from "./proudctpage/product.js";
 import ProductProvider from "./proudctpage/ProductProvider";
-import ProductDetail from "./proudctpage/proudctData.js";
+import ProductDetail from "./pages/detailPage.js";
 import Minin from "./proudctpage/miniCart.js";
 import CartShow from "./proudctpage/cartShow.js";
 import Testr from "./proudctpage/test.js";
@@ -47,7 +47,6 @@ function App() {
                   <Midpart />
                   <Show />
                   <Footer />
-                  <Cart />
                   <Minin />
                 </>
               }

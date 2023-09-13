@@ -33,49 +33,56 @@ function Cart() {
   return (
     <div>
       <h1>Shopping Cart</h1>
-      {cart.map((product) => (
-        <div className="product" key={product._id}>
-          <div className="product-image">
-            <img
-              src={product.image.name}
-              alt={product.name}
-              className="aboutImage"
-            />
+      {cart.length === 0 ? (
+        <div className="emptyDiv">Your cart is empty.</div>
+      ) : (
+        cart.map((product) => (
+          <div className="product" key={product._id}>
+            <div className="product-image">
+              <img
+                src={product.imageURL}
+                alt={product.name}
+                className="aboutImage"
+              />
+            </div>
+            <div className="product-details">
+              <div className="product-title">{product.name}</div>
+              <p className="product-description">{product.description}</p>
+            </div>
+            <div className="product-price">
+              {product.price.$numberDecimal} EUR
+            </div>
+            <div className="product-quantity">
+              <input
+                type="number"
+                value={product.quantity}
+                onChange={(e) =>
+                  handleQuantityChange(
+                    product._id,
+                    parseInt(e.target.value, 10)
+                  )
+                }
+                min="1"
+                max="10"
+              />
+            </div>
+            <div className="product-removal">
+              <button
+                className="remove-product"
+                onClick={() => handleRemove(product._id)}
+              >
+                Remove
+              </button>
+            </div>
+            <div className="product-line-price">
+              {(
+                parseFloat(product.price.$numberDecimal) * product.quantity
+              ).toFixed(2)}{" "}
+              EUR
+            </div>
           </div>
-          <div className="product-details">
-            <div className="product-title">{product.name}</div>
-            <p className="product-description">{product.description}</p>
-          </div>
-          <div className="product-price">
-            {product.price.$numberDecimal} EUR
-          </div>
-          <div className="product-quantity">
-            <input
-              type="number"
-              value={product.quantity}
-              onChange={(e) =>
-                handleQuantityChange(product._id, parseInt(e.target.value, 10))
-              }
-              min="1"
-              max="5"
-            />
-          </div>
-          <div className="product-removal">
-            <button
-              className="remove-product"
-              onClick={() => handleRemove(product._id)}
-            >
-              Remove
-            </button>
-          </div>
-          <div className="product-line-price">
-            {(
-              parseFloat(product.price.$numberDecimal) * product.quantity
-            ).toFixed(2)}{" "}
-            EUR
-          </div>
-        </div>
-      ))}
+        ))
+      )}
       <div className="totals">
         <div className="totals-item">
           <label>Subtotal</label>
@@ -89,14 +96,14 @@ function Cart() {
             {shippingFee.toFixed(2)} EUR
           </div>
         </div>
-        <div className="totals-item totals-item-total">
+        <div className="totals-item totals-item-">
           <label>Grand Total</label>
           <div className="totals-value" id="cart-total">
             {total.toFixed(2)} EUR
           </div>
+          <button className="checkout">Checkout</button>
         </div>
       </div>
-      <button className="checkout">Checkout</button>
       <FooterBottom />
     </div>
   );
