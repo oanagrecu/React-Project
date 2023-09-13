@@ -8,7 +8,7 @@ import Change from "./homepage/imgchange.js";
 import Footer from "./common/footer.js";
 import Proudct from "./proudctpage/product.js";
 import ProductProvider from "./proudctpage/ProductProvider";
-import ProductDetail from "./pages/detailPage.js";
+import ProductDetail from "./pages/testoana.js";
 import Minin from "./proudctpage/miniCart.js";
 import CartShow from "./proudctpage/cartShow.js";
 import Testr from "./proudctpage/test.js";
