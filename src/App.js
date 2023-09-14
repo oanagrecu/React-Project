@@ -9,6 +9,7 @@ import Footer from "./common/footer.js";
 import Proudct from "./proudctpage/product.js";
 import ProductProvider from "./proudctpage/ProductProvider";
 import ProductDetail from "./proudctpage/proudctData.js";
+import Fatline from "./common/fatline";
 import Minin from "./proudctpage/miniCart.js";
 import CartShow from "./proudctpage/cartShow.js";
 import Testr from "./proudctpage/test.js";
@@ -21,7 +22,6 @@ import Cart from "./pages/Cart";
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
-
   useEffect(() => {
     // Simulate an async task, e.g., data fetching
     const timer = setTimeout(() => {
@@ -33,7 +33,6 @@ function App() {
   if (isLoading) {
     return <LoaderComp />;
   }
-
   return (
     <ProductProvider>
       <Router>
@@ -46,8 +45,6 @@ function App() {
                 <>
                   <Midpart />
                   <Show />
-                  <Footer />
-                  <Minin />
                 </>
               }
             />
@@ -59,9 +56,12 @@ function App() {
             <Route path="/contact" element={<Contact />} />
             <Route path="/cart" element={<Cart />} />
           </Routes>
+          <Fatline/>
+          <Footer />
         </div>
       </Router>
     </ProductProvider>
+
   );
 }
 export default App;

@@ -97,7 +97,6 @@ function Cart() {
         </div>
       </div>
       <button className="checkout">Checkout</button>
-      <FooterBottom />
     </div>
   );
 }
