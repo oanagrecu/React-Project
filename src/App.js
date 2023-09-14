@@ -19,7 +19,7 @@ import "./common/footer.css";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Cart from "./pages/Cart";
-
+import Testoana from "./pages/testoana";
 function App() {
   const [isLoading, setIsLoading] = useState(true);
   useEffect(() => {
@@ -49,19 +49,19 @@ function App() {
               }
             />
             <Route path="/Collection" element={<CartShow />} />
-            <Route path="/product/:id" element={<ProductDetail />} />
+            <Route path="/product/:id" element={<Testoana />} />
             {/* <Route path="/cart" element={<Minin />} /> */}
             <Route path="/test" element={<Testr />} />
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/cart" element={<Cart />} />
+            <Route path="/tes1" element={<Testoana/>} />
           </Routes>
           <Fatline/>
           <Footer />
         </div>
       </Router>
     </ProductProvider>
-
   );
 }
 export default App;
