@@ -1,10 +1,14 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import ProductContext from "../proudctpage/ProductContext";
 import "./testoana.css";
 
 function DetailPage() {
   const { selectedProduct, addToCart } = useContext(ProductContext);
+
+  const [chestValue, setChestValue] = useState("");
+  const [waistValue, setWaistValue] = useState("");
+  const [hipsValue, setHipsValue] = useState("");
 
   return (
     <div>
@@ -24,19 +28,37 @@ function DetailPage() {
             <label htmlFor="chest" className="chest">
               Chest
             </label>
-            <input type="text" name="chest" value="" required />
+            <input
+              type="text"
+              name="chest"
+              value={chestValue}
+              onChange={(e) => setChestValue(e.target.value)}
+              required
+            />
           </div>
           <div className="rectangle-11">
             <label htmlFor="waist" className="waist">
               Waist
             </label>
-            <input type="text" name="waist" value="" required />
+            <input
+              type="text"
+              name="waist"
+              value={waistValue}
+              onChange={(e) => setWaistValue(e.target.value)}
+              required
+            />
           </div>
           <div className="rectangle-12">
             <label htmlFor="hips" className="hips">
               Hips
             </label>
-            <input type="text" name="hips" value="" required />
+            <input
+              type="text"
+              name="hips"
+              value={hipsValue}
+              onChange={(e) => setHipsValue(e.target.value)}
+              required
+            />
           </div>
         </div>
         <div className="quantity">- 1 +</div>
@@ -51,16 +73,21 @@ function DetailPage() {
           enim sit amet venenatis urna. Ullamcorper morbi tincidunt ornare massa
           eget egestas. Duis at consectetur lorem donec massa sapien faucibus
           et. Scelerisque eu ultrices vitae auctor eu augue ut.
-          <button onClick={() => addToCart(selectedProduct)} className="checkout">Add to cart</button>
+          <button
+            onClick={() => addToCart(selectedProduct)}
+            className="checkout"
+          >
+            Add to cart
+          </button>
         </div>
       </div>
-      
+
       <Link to="/cart">
         <p className="checkout">View Cart</p>
       </Link>
-      <a href="/collection" className="checkout">
+      <Link to="/collection" className="checkout">
         Continue shopping
-      </a>
+      </Link>
     </div>
   );
 }

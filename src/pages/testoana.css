@@ -52,6 +52,7 @@
   height: 57px;
 }
 .rectangle-10 {
+  color: black;
   border-radius: 0px;
   position: absolute;
   left: 700px;
@@ -59,6 +60,7 @@
   overflow: visible;
 }
 .rectangle-11 {
+  color: black;
   border-radius: 0px;
   position: absolute;
   left: 700px;
@@ -72,6 +74,9 @@
   left: 700px;
   top: 612px;
   overflow: visible;
+}
+input{
+  color:black;
 }
 .chest {
   color: #c38e77;
