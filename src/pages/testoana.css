@@ -135,5 +135,8 @@
   font: 400 20px "Poppins", sans-serif;
   position: absolute;
   left: 60px;
+  right: 60px;
   top: 1050px;
+  line-height: 1.5;
+  margin-bottom: 50px;
 }

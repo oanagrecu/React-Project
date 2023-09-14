@@ -101,7 +101,18 @@ function Cart() {
           <div className="totals-value" id="cart-total">
             {total.toFixed(2)} EUR
           </div>
-          <button className="checkout">Checkout</button>
+          <div className="space-y-4 text-center">
+            <a href="#" className="checkout">
+              Checkout
+            </a>
+
+            <a
+              href="/collection"
+              className="inline-block text-sm text-gray-500 underline underline-offset-4 transition hover:text-gray-600"
+            >
+              Continue shopping
+            </a>
+          </div>
         </div>
       </div>
       <FooterBottom />

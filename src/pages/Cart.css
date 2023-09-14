@@ -126,7 +126,7 @@ label {
 .totals.totals-item-total {
   font-family: white;
 }
-.checkout {
+/* .checkout {
   float: right;
   border: 0;
   margin-top: 20px;
@@ -135,10 +135,23 @@ label {
   color: #fff;
   font-size: 25px;
   border-radius: 3px;
+} */
+.checkout {
+  display: block;
+  background-color: #c38e77;
+  font-weight: 700;
+  padding: 6px 0;
+  color: white;
+  transition: all 0.3s ease;
+  font-size: 0.95rem;
+  border-radius: 5px;
+  width: 50%;
+  margin: 0 auto;
+  text-align: center;
 }
 
 .checkout:hover {
-  background-color: #c38e77;
+  background-color: #cb460d;
 }
 .emptyDiv {
   text-align: center;

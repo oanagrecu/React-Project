@@ -24,34 +24,19 @@ function DetailPage() {
             <label htmlFor="chest" className="chest">
               Chest
             </label>
-            <input
-              type="text"
-              name="chest"
-              value=""
-              required
-            />
+            <input type="text" name="chest" value="" required />
           </div>
           <div className="rectangle-11">
             <label htmlFor="waist" className="waist">
               Waist
             </label>
-            <input
-              type="text"
-              name="waist"
-              value=""
-              required
-            />
+            <input type="text" name="waist" value="" required />
           </div>
           <div className="rectangle-12">
             <label htmlFor="hips" className="hips">
               Hips
             </label>
-            <input
-              type="text"
-              name="hips"
-              value=""
-              required
-            />
+            <input type="text" name="hips" value="" required />
           </div>
         </div>
         <div className="quantity">- 1 +</div>
@@ -66,12 +51,16 @@ function DetailPage() {
           enim sit amet venenatis urna. Ullamcorper morbi tincidunt ornare massa
           eget egestas. Duis at consectetur lorem donec massa sapien faucibus
           et. Scelerisque eu ultrices vitae auctor eu augue ut.
+          <button onClick={() => addToCart(selectedProduct)} className="checkout">Add to cart</button>
         </div>
       </div>
-      <button onClick={() => addToCart(selectedProduct)}>Add to cart</button>
+      
       <Link to="/cart">
-        <p>View Cart</p>
+        <p className="checkout">View Cart</p>
       </Link>
+      <a href="/collection" className="checkout">
+        Continue shopping
+      </a>
     </div>
   );
 }
