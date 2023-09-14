@@ -9,15 +9,35 @@ function DetailPage() {
   const [chestValue, setChestValue] = useState("");
   const [waistValue, setWaistValue] = useState("");
   const [hipsValue, setHipsValue] = useState("");
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  const images = [selectedProduct.imageURL, selectedProduct.imageURL];
+
+  const nextImage = () => {
+    setCurrentImageIndex((prevIndex) =>
+      prevIndex === images.length - 1 ? 0 : prevIndex + 1
+    );
+  };
+
+  const prevImage = () => {
+    setCurrentImageIndex((prevIndex) =>
+      prevIndex === 0 ? images.length - 1 : prevIndex - 1
+    );
+  };
 
   return (
     <div>
       <div className="section-2">
-        <img
-          className="imageDiv"
-          src={selectedProduct.imageURL}
-          alt={selectedProduct.name}
-        />
+        <div>
+          <button onClick={prevImage}>Prev</button>
+          <img
+            id="slider"
+            className="imageDiv"
+            src={images[currentImageIndex]}
+            alt={selectedProduct.name}
+          />
+          <button onClick={nextImage}>Next</button>
+        </div>
         <div className="textDescription">{selectedProduct.name}</div>
         <div className="itemPrice">
           {selectedProduct.price.$numberDecimal} €
