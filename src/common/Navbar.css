@@ -8,8 +8,11 @@
   font-family: 'Times New Roman', Times, serif;
 }
 .navbar li a {
-  font-family: 'Times New Roman', Times, serif;
-  font-size: 20px;
+  font-family: 'Indie Flower', cursive;
+  font-family: 'Playfair Display', serif;
+  font-family: 'Public Sans', sans-serif;
+  font-family: 'Roboto Mono', monospace;
+  color: white;
 }
 .logo img {
   width: 120px; /* Adjust the width as needed */
