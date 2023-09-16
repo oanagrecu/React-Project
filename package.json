@@ -2,6 +2,9 @@
   "name": "alize-webhopv",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "node": "18.17.1"
+  },
   "dependencies": {
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
     "@forestadmin/agent": "^1.28.3",
