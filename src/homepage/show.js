@@ -13,7 +13,7 @@ function Show() {
   return (
     <div className="imgs-conta">
       <div className="big-img">
-        <img src={selectedProduct.imageURL} alt="Description" />
+        <img src={selectedProduct?.imageURL} alt="Description" />
       </div>
       <div className="small-img">
         <img src={jacket2} alt="Description" />

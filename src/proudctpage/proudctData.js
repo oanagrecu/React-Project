@@ -8,7 +8,7 @@ function ProductDetail() {
   const { selectedProduct, addToCart } = useContext(ProductContext);
 
   if (!selectedProduct) return <div>No product selected</div>;
-  const imageUrl = selectedProduct.imageURL;
+  const imageUrl = selectedProduct?.imageURL;
   return (
     <div>
       {/* Use the imageUrl as the src attribute for the image */}
