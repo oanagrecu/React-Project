@@ -15,7 +15,8 @@ function AddProduct() {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const response = await fetch('https://ashmademoiselle-8623d0938879.herokuapp.com/products/add-product', { // Your API endpoint
+            const response = await fetch('https://cors-anywhere.herokuapp.com/https://ashmademoiselle-8623d0938879.herokuapp.com/products/add-proudct',
+            { // Your API endpoint
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

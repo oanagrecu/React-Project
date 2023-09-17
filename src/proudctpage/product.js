@@ -10,7 +10,8 @@ function Prodct() {
 
     const makeCall = async () => {
         try {
-            const response = await fetch('/products', {
+            const response = await fetch('https://cors-anywhere.herokuapp.com/https://ashmademoiselle-8623d0938879.herokuapp.com/products',
+            {
                 method: 'GET',
                 mode: 'cors',
                 headers: {
