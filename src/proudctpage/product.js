@@ -13,7 +13,7 @@ function Prodct() {
             const response = await fetch('https://ashmademoiselle-8623d0938879.herokuapp.com/products',
             {
                 method: 'GET',
-                mode: 'cors',
+                mode: 'no-cors',
                 headers: {
                     'Content-Type': 'application/json'
                 }
