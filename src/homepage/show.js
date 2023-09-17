@@ -1,6 +1,5 @@
-import {useState, useEffect, useContext} from "react";
+import {useContext} from "react";
 import "./show.css";
-import jacket1 from '../img/jacket1.webp'
 import jacket2 from '../img/jacket2.webp'
 import jacket3 from '../img/jacket3.webp'
 import jacket4 from '../img/jacket4.jpg'
