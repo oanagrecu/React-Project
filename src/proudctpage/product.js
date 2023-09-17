@@ -10,8 +10,7 @@ function Prodct() {
 
     const makeCall = async () => {
         try {
-            const response = await fetch('https://ashmademoiselle-8623d0938879.herokuapp.com/products',
-            {
+            const response = await fetch('/api/products',            {
                 method: 'GET',
                 headers: {
                     'Content-Type': 'application/json'
