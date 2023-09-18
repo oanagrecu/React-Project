@@ -5,7 +5,7 @@ import { Outlet } from 'react-router-dom';
 function AdminLayout() {
     return (
         <div>
-            <nav>
+            <nav className='nav-ab'>
                 <Link to="/admin/add-product">Add Product</Link>
                 <Link to="/admin/view-transactions">View Transactions</Link>
                 <Link to="/admin/update-product">Update proudct</Link>

@@ -23,6 +23,7 @@ import "./common/footer.css";
 import 'bootstrap/dist/css/bootstrap.css';
 import PrivateRoute from "./admin/PrivateRoute";
 import PhoneNav from "./common/mobileNav";
+import './common/phones.css'
 function App() {
   const [isLoading, setIsLoading] = useState(true);
 

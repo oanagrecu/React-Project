@@ -1,9 +1,7 @@
 import { useState, useEffect, useContext } from "react";
 import { Link } from "react-router-dom";
 import ProductContext from "./ProductContext";
-
 import "./proudct.css";
-
 function Prodct() {
     const [data, setData] = useState([]);
     const { setSelectedProduct } = useContext(ProductContext);
