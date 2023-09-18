@@ -7,7 +7,7 @@ function UpdateProduct() {
     const [imageURL, setimageURL] = useState('');
     const [price, setprice] = useState('');
     const [message, setMessage] = useState('');  // To display success or error messages
-    const tokenUpdate = process.env.REACT_APP_Update;
+    const tokenUpdate = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiQWRtaW4xIiwiZW1haWwiOiJhZG1pbjFAdGVzdC5jb20iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE2OTQ3NzY0NzEsImV4cCI6MTY5NTAzNTY3MX0.4-wajgInu1rO5EjdbvqHAHsxErCOfnOGcDI3ERXfOKs'
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 function AddProduct() {
-    const token = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiQWRtaW4xIiwiZW1haWwiOiJhZG1pbjFAdGVzdC5jb20iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE2OTQ1NTEwOTYsImV4cCI6MTY5NDgxMDI5Nn0.CmOPi2yZ9ppo0kKvhE_MiVB6MXVHwBZFOBGr6qBkeh4'
+    const token = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiQWRtaW4xIiwiZW1haWwiOiJhZG1pbjFAdGVzdC5jb20iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE2OTQ3NzY0NzEsImV4cCI6MTY5NTAzNTY3MX0.4-wajgInu1rO5EjdbvqHAHsxErCOfnOGcDI3ERXfOKs'
     const [productData, setProductData] = useState({
         name: '',
         price: '',
@@ -15,7 +15,7 @@ function AddProduct() {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const response = await fetch('https://ashmademoiselle-8623d0938879.herokuapp.com/products/add-product', { // Your API endpoint
+            const response = await fetch('https://ashmademoiselle-8623d0938879.herokuapp.com/products/add-product', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -63,7 +63,6 @@ function AddProduct() {
                         name="Imgurl"
                         value={productData.imageURL}
                         onChange={handleChange}
-                        required
                     />
                 </div>
                 <div>

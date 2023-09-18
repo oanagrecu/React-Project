@@ -1,8 +1,8 @@
-import React, {useEffect } from "react";
-
-import { Outlet, useNavigate } from 'react-router-dom';
-
+import React from 'react'
+import { useNavigate } from "react-router-dom";
+import AdminRoutes from  './routes'
 function PrivateRoute() {
+
     const isAuthorized = Boolean(localStorage.getItem('userToken'));
     const navigate = useNavigate();
 
@@ -11,7 +11,7 @@ function PrivateRoute() {
         return null;
     }
 
-    return <Outlet />;
+    return <AdminRoutes />;
 }
 
 export default PrivateRoute;

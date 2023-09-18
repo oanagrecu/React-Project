@@ -3,15 +3,15 @@ import { Routes, Route } from 'react-router-dom';
 import AdminLayout from './AdminLayout';
 import Adding from './Add-pro';
 import Update from './update';
-function AdminRoutes(children) {
+function AdminRoutes() {
     return (
-        <AdminLayout>
-            <Routes>
-                <Route path="/" element={<AdminLayout />} /> //
-                <Route path="add-product" element={<Adding />} />
-                <Route path="update-product" element={<Update />} />
-            </Routes>
-        </AdminLayout>
+        <Routes>
+            {/* Define your specific admin routes here */}
+            <Route path="/" element={<AdminLayout />} />
+            <Route path="/add-product" element={<Adding />} />
+            <Route path="/update-product" element={<Update />} />
+            {/* ... other admin routes ... */}
+        </Routes>
     );
 }
 

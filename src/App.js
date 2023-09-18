@@ -22,7 +22,7 @@ import "./common/navbar.css";
 import "./common/footer.css";
 import 'bootstrap/dist/css/bootstrap.css';
 import PrivateRoute from "./admin/PrivateRoute";
-
+import PhoneNav from "./common/mobileNav";
 function App() {
   const [isLoading, setIsLoading] = useState(true);
 
@@ -41,6 +41,8 @@ function App() {
       <ProductProvider>
         <Router>
           <div className="App">
+            <PhoneNav/>
+
             <Navbar />
             <Routes>
               <Route path="/" element={
@@ -56,14 +58,12 @@ function App() {
               <Route path="/contact" element={<Contact />} />
               <Route path="/cart" element={<Cart />} />
               <Route path="/tes1" element={<Testoana/>} />
-              <Route path="/admin" element={<PrivateRoute />}>
-                <Route index element={<AdminRoutes />} />
-                <Route path="/admin/*" element={<AdminRoutes />} />
+              <Route path="/admin/*" element={<PrivateRoute />}>
               </Route>
               <Route path="/login" element={<Login />} />
               </Routes>
                 <Fatline/>
-                <Footer />
+            <Footer />
                 </div>
                 </Router>
                 </ProductProvider>
