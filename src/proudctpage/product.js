@@ -7,7 +7,6 @@ import "./proudct.css";
 function Prodct() {
     const [data, setData] = useState([]);
     const { setSelectedProduct } = useContext(ProductContext);
-
     const makeCall = async () => {
         try {
             const response = await fetch('https://ashmademoiselle-8623d0938879.herokuapp.com/products',            {
